@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Subo 的网络工程师学习博客，记录网络基础、实验拓扑、排障笔记和备考路线。"
+    />
+    <title>Subo 网络工程师学习笔记</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="返回首页">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>Subo NetLab</strong>
+          <small>blog.subo123.com</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#notes">学习笔记</a>
+        <a href="#lab">实验拓扑</a>
+        <a href="#roadmap">备考路线</a>
+        <a href="#about">关于</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Network Engineer Learning Journal</p>
+          <h1>把每一次配置、抓包和排障，都沉淀成自己的网络工程方法。</h1>
+          <p class="hero-text">
+            这里会记录网络基础、交换路由、安全、Linux、自动化和软考网络工程师备考过程。
+            内容以“能复现、能解释、能排错”为标准。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#notes">开始阅读</a>
+            <a class="button secondary" href="./posts/first-note.html">查看第一篇</a>
+          </div>
+        </div>
+        <div class="network-panel" aria-label="网络拓扑装饰图">
+          <div class="topology">
+            <span class="node core">Core</span>
+            <span class="node switch">SW</span>
+            <span class="node router">R1</span>
+            <span class="node server">Srv</span>
+            <span class="node client">PC</span>
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+            <span class="line l4"></span>
+          </div>
+          <dl class="status-grid">
+            <div>
+              <dt>VLAN</dt>
+              <dd>规划中</dd>
+            </div>
+            <div>
+              <dt>OSPF</dt>
+              <dd>实验中</dd>
+            </div>
+            <div>
+              <dt>ACL</dt>
+              <dd>整理中</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="notes" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Notes</p>
+          <h2>学习笔记</h2>
+        </div>
+        <div class="post-grid">
+          <article class="post-card">
+            <p class="tag">入门</p>
+            <h3><a href="./posts/first-note.html">我的网络工程师学习博客从这里开始</a></h3>
+            <p>
+              记录这个博客要解决什么问题，以及后续如何整理网络知识、实验和错题。
+            </p>
+            <time datetime="2026-05-23">2026-05-23</time>
+          </article>
+          <article class="post-card muted">
+            <p class="tag">规划</p>
+            <h3>网络基础知识清单</h3>
+            <p>OSI 七层模型、TCP/IP、子网划分、常见协议和抓包观察。</p>
+            <time>即将更新</time>
+          </article>
+          <article class="post-card muted">
+            <p class="tag">实验</p>
+            <h3>交换机 VLAN 与 Trunk 实验</h3>
+            <p>从拓扑设计到连通性验证，形成一篇可复现实验记录。</p>
+            <time>即将更新</time>
+          </article>
+        </div>
+      </section>
+
+      <section id="lab" class="section split">
+        <div>
+          <p class="eyebrow">Lab</p>
+          <h2>实验记录模板</h2>
+          <p>
+            每篇实验文章建议固定包含：目标、拓扑、地址规划、关键配置、验证命令、
+            故障现象、排查过程和最终结论。
+          </p>
+        </div>
+        <ol class="lab-list">
+          <li>画出拓扑和设备角色</li>
+          <li>写清 IP、VLAN、路由和安全策略</li>
+          <li>贴关键配置，不堆无关输出</li>
+          <li>用 ping、traceroute、抓包或日志验证</li>
+        </ol>
+      </section>
+
+      <section id="roadmap" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2>阶段路线</h2>
+        </div>
+        <div class="timeline">
+          <div>
+            <span>01</span>
+            <h3>网络基础</h3>
+            <p>协议、地址、子网、ARP、ICMP、TCP/UDP。</p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>交换路由</h3>
+            <p>VLAN、STP、静态路由、RIP、OSPF。</p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>服务与安全</h3>
+            <p>DNS、DHCP、NAT、ACL、防火墙基础。</p>
+          </div>
+          <div>
+            <span>04</span>
+            <h3>备考输出</h3>
+            <p>错题复盘、知识卡片、真题方法。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <p class="eyebrow">About</p>
+        <h2>关于这个博客</h2>
+        <p>
+          这是 Subo 的网络工程师学习空间。目标不是收藏资料，而是把学过的内容整理成
+          以后能直接复用的配置、图解、排障步骤和备考笔记。
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Subo NetLab. Built for blog.subo123.com.</p>
+    </footer>
+  </body>
+</html>
