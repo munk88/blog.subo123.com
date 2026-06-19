@@ -20,12 +20,14 @@ export default function RootLayout({
             Subo 网络学习笔记
           </Link>
           <nav aria-label="主导航">
-            <Link href="/">文章</Link>
-            <a href="https://blog.subo123.com">blog.subo123.com</a>
+            <Link href="/#network">网络工程</Link>
+            <Link href="/#linux">Linux 系统</Link>
+            <Link href="/#building">站点建设</Link>
           </nav>
         </header>
         {children}
         <footer className="site-footer">
+          <span>SUBO TECH LOG</span>
           <span>记录真实实验、命令结果和排障过程。</span>
         </footer>
       </body>

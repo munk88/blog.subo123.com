@@ -1,21 +1,43 @@
-# Subo NetLab
+# blog.subo123.com
 
-这是 `blog.subo123.com` 的静态博客起始版本，用来记录网络工程师学习笔记、实验拓扑、排障过程和备考复盘。
+Next.js + Markdown 技术博客，部署到 Cloudflare Pages。
+
+## 三个栏目
+
+新文章的 `category` 请使用以下三个固定值之一：
+
+- `网络工程`：网络实验、路由交换、DNS、代理和排障
+- `Linux 系统`：Linux、Shell、服务配置和服务器运维
+- `站点建设`：Next.js、Markdown、Cloudflare 和博客迭代
+
+## 新建文章
+
+在 `content/posts/` 新建一个英文小写文件名，例如 `dns-troubleshooting.md`：
+
+```md
+---
+title: "文章标题"
+date: "2026-06-19"
+category: "网络工程"
+summary: "用一句话说明这篇文章解决什么问题。"
+---
+
+这里开始写正文。
+```
+
+提交到 GitHub 的 `main` 分支后，Cloudflare Pages 会自动构建并发布。
 
 ## 本地预览
 
-直接打开 `index.html` 即可预览。
+```bash
+npm install
+npm run dev
+```
 
-## 部署建议
+## Cloudflare Pages 构建
 
-- GitHub Pages：把仓库发布为 Pages，`CNAME` 已经写好 `blog.subo123.com`。
-- Cloudflare Pages：连接仓库后设置自定义域名 `blog.subo123.com`。
-- 自己的服务器：把整个目录上传到网站根目录，并把域名解析到服务器 IP。
+```bash
+npm run build
+```
 
-## DNS 提醒
-
-部署到具体平台后，再根据平台给出的记录添加 DNS：
-
-- GitHub Pages 通常使用 `CNAME` 指向你的 GitHub Pages 域名。
-- Cloudflare Pages 通常添加平台提示的 `CNAME`。
-- 自己的服务器通常添加 `A` 记录指向服务器公网 IP。
+Deploy the generated `out/` directory.
